@@ -37,7 +37,7 @@ app.use(express.static(__dirname + '/public'));
 //Routes:
 //#####################################################
 app.post('/api/product', productCtrl.create);
-app.get('/api/product', productCtrl.read);
+app.get('/api/product/', productCtrl.read);
 app.put('/api/product/:id', productCtrl.update);
 app.delete('/api/product/:id', productCtrl.remove);
 

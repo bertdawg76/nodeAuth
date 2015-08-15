@@ -1,0 +1,31 @@
+//This is just dummy data for the prduct model!
+[
+  {
+    "article": "Timberland 6",
+    "category": "shoes",
+    "brand": "Timberland",
+    "description": "Premium Waterproof Boots",
+    "price": 180
+  },
+  {
+    "article": "Air Jordan",
+    "category": "shoes",
+    "brand": "Nike",
+    "description": "Basketball Shoes",
+    "price": 150
+  },
+  {
+    "article": "Mr. Panama Jack",
+    "category": "shoes",
+    "brand": "Panama Jack",
+    "description": "Waterproof designer boot in waxy black nubuck leather with plain front",
+    "price": 250
+  },
+  {
+    "article": "Shadow Dress Sock",
+    "category": "socks",
+    "brand": "Falke",
+    "description": "Shadow Dress Sock",
+    "price": 25
+  }
+]

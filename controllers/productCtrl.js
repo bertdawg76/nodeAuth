@@ -13,7 +13,8 @@ var create = function(req, res) {
 };
 
 var read = function(req, res) {
-  Product.find(req.query, function(err, result) {
+  Product.find({category: req.query.category})
+  .exec(function(err, result) {
     if (err) {
       res.status(500).json(err);
     } else {
@@ -23,7 +24,7 @@ var read = function(req, res) {
 };
 
 var update = function(req, res) {
-  Product.update(req.query, req.body, function(err, result) {
+  Product.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
     if (err) {
       res.status(500).json(err);
     } else {
@@ -33,7 +34,7 @@ var update = function(req, res) {
 };
 
 var remove = function(req, res) {
-  Sighting.remove(req.query, function(err, result) {
+  Product.findByIdAndRemove(req.params.id, function(err, result) {
     if (err) {
       res.status(500).json(err);
     } else {
