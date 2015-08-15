@@ -29,6 +29,10 @@ var port = process.argv[2] || 3000;
 app.use('/', bodyParser.json());
 app.use('/', cors());
 
+/* Middelware to render all of our public files. Any files of
+the public folder will be renderd if you use them*/
+app.use(express.static(__dirname + '/public'));
+
 //#####################################################
 //Routes:
 //#####################################################
@@ -51,7 +55,7 @@ app.listen(port, function(err) {
 //#####################################################
 //Connection to database:
 //#####################################################
-var mongoUri = 'mongodb://localhost:27017/sightings';
+var mongoUri = 'mongodb://localhost:27017/ecommerce';
 mongoose.connect(mongoUri, function(err) {
 	if (err) {
 		console.log('Connection to MongoDB failed');
