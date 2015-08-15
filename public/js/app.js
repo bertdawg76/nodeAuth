@@ -11,11 +11,11 @@ app.config(function($routeProvider) {
 		})
 	    .when('/login', {
 	  		templateUrl: './views/login.html',
-	  		controller: 'loginCtrl',
+	  		controller: 'authCtrl',
 	  	})
 	    .when('/register', {
 	  		templateUrl: './views/register.html',
-	  		controller: 'registerCtrl',
+	  		controller: 'authCtrl',
 	  	})
 	  	.when('/products', {
 	  		templateUrl: './views/products.html',
