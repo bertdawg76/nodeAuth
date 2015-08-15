@@ -1,0 +1,26 @@
+{
+  "name": "nodeAuth",
+  "version": "1.0.0",
+  "description": "Authentication using Passport",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/philippschulte/nodeAuth.git"
+  },
+  "author": "Philipp Schulte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philippschulte/nodeAuth/issues"
+  },
+  "homepage": "https://github.com/philippschulte/nodeAuth",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.2"
+  }
+}
