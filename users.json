@@ -1,0 +1,18 @@
+//This is just dummy data for the user model!
+[
+  {
+    "name": "Philipp Schulte",
+    "email": "philipp.schulte@ymail.com",
+    "password": "meschede123"
+  },
+  {
+    "name": "Polina Marchenko",
+    "email": "polina.marchenko@yahoo.com",
+    "password": "Generalfeldmarschall1945"
+  },
+  {
+    "name": "Norbert Rettler",
+    "email": "norbert.rettler@outlock.de",
+    "password": "monikarettler"
+  }
+]
