@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 //Controllers:
 //#####################################################
 var productCtrl = require('./controllers/productCtrl.js');
+var userCtrl = require('./controllers/userCtrl.js');
 
 //#####################################################
 //Express:
@@ -36,10 +37,17 @@ app.use(express.static(__dirname + '/public'));
 //#####################################################
 //Routes:
 //#####################################################
+/* Products */
 app.post('/api/product', productCtrl.create);
 app.get('/api/product/', productCtrl.read);
-app.put('/api/product/:id', productCtrl.update);
-app.delete('/api/product/:id', productCtrl.remove);
+app.put('/api/product/:productId', productCtrl.update);
+app.delete('/api/product/:productId', productCtrl.remove);
+/* Users */
+app.post('/api/users', userCtrl.create);
+app.post('/api/users/:userId/products', userCtrl.add);
+app.get('/api/users/', userCtrl.read);
+app.put('/api/users/:userId', userCtrl.update);
+app.delete('/api/users/:userId', userCtrl.remove);
 
 //#####################################################
 //Starting server:

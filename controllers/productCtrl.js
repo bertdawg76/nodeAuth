@@ -24,7 +24,7 @@ var read = function(req, res) {
 };
 
 var update = function(req, res) {
-  Product.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
+  Product.findByIdAndUpdate(req.params.productId, req.body, function(err, result) {
     if (err) {
       res.status(500).json(err);
     } else {
@@ -34,7 +34,7 @@ var update = function(req, res) {
 };
 
 var remove = function(req, res) {
-  Product.findByIdAndRemove(req.params.id, function(err, result) {
+  Product.findByIdAndRemove(req.params.productId, function(err, result) {
     if (err) {
       res.status(500).json(err);
     } else {
