@@ -39,13 +39,13 @@ app.use(express.static(__dirname + '/public'));
 //#####################################################
 /* Products */
 app.post('/api/products', productCtrl.create);
-app.get('/api/products/', productCtrl.read);
+app.get('/api/products', productCtrl.read);
 app.put('/api/products/:productId', productCtrl.update);
 app.delete('/api/products/:productId', productCtrl.remove);
 /* Users */
 app.post('/api/users', userCtrl.create);
 app.post('/api/users/:userId/products', userCtrl.add);
-app.get('/api/users/', userCtrl.read);
+app.get('/api/users', userCtrl.read);
 app.put('/api/users/:userId', userCtrl.update);
 app.delete('/api/users/:userId', userCtrl.remove);
 
