@@ -2,12 +2,25 @@
   <div class="page-header">
     <h2>Products</h2>
   </div>
-  <div class="panel panel-default">
+
+  <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+    <input type="text"  class="form-control" ng-model="product" placeholder="Filter the products by name, brand, category, description or price" aria-describedby="sizing-addon2">
+  </div>
+
+  <br>
+
+  <div ng-repeat="product in products | filter: product" class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Panel title</h3>
+      <h3 class="panel-title">{{product.article}}</h3>
     </div>
     <div class="panel-body">
-      Panel content
+      <ul class="list-group">
+        <li class="list-group-item">Brand: {{product.brand}}</li>
+        <li class="list-group-item">Category: {{product.category}}</li>
+        <li class="list-group-item">Description: {{product.description}}</li>
+        <li class="list-group-item">Price: <strong>{{product.price | currency}}</strong></li>
+      </ul>
     </div>
   </div>
 </div>
