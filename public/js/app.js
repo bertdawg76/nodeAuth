@@ -19,7 +19,12 @@ app.config(function($routeProvider) {
 	  	})
 	  	.when('/products', {
 	  		templateUrl: './views/products.html',
-	  		controller: 'productsCtrl'
+	  		controller: 'productsCtrl',
+	  		resolve: {
+	  			products: function(networkService) {
+	  				return networkService.getProducts();
+	  			}
+	  		}
 	  	})
 	  	.otherwise({
 	    	redirectTo: '/'
